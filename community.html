@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - My Secret Pocket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Community</h1>
+        <nav>
+            <a href="dashboard.html">Home</a>
+            <a href="notes.html">My Notes</a>
+            <a href="community.html">Communities</a>
+            <a href="view_affirmation.html">Affirmations</a>
+            <a href="php/logout.php">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Community Disscussion</h2>
+            <div id="posts-container">
+                <!-- Assume posts are dynamically loaded here -->
+                <div class="post" id="post-1">
+                    <!-- Post content here -->
+                    <h3>Post Title</h3>
+                    <p>Post content goes here...</p>
+                    
+                    <!-- Comment Section -->
+                    <div class="comments-section" data-post-id="1">
+                        <h4>Comments</h4>
+                        <div class="comments-container" id="comments-1">
+                            <!-- Comments will be dynamically loaded here -->
+                        </div>
+            
+                        <form class="comment-form" data-post-id="1">
+                            <textarea name="content" placeholder="Add a comment..." required></textarea>
+                            <button type="submit">Post Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+        <section>
+            <h2>Join a Community</h2>
+            <div id="community-container">
+                <!-- Communities will be dynamically loaded here -->
+            </div>
+        </section>
+        <section>
+            <h2>Create a New Community</h2>
+            <form id="create-community-form" action="php/create_community.php" method="POST">
+                <label for="community-name">Community Name:</label>
+                <input type="text" id="community-name" name="name" required>
+                
+                <label for="community-description">Description:</label>
+                <textarea id="community-description" name="description" required></textarea>
+
+
+                <label for="community-category">Category:</label>
+                <input type="text" id="community-category" name="category" required>
+
+        
+                <label for="community-visibility">Visibility:</label>
+                <select id="community-visibility" name="visibility" required>
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                </select>
+                
+                <button type="submit">Create Community</button>
+            </form>
+            <section>
+                <h2>Find a Community by Category</h2>
+                <label for="filter-category">Category:</label>
+                <select id="filter-category">
+                    <option value="">All</option>
+                    <option value="Health">Health</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Education">Education</option>
+                    <option value="Hobbies">Hobbies</option>
+                    <!-- Add more categories as needed -->
+                </select>
+            
+                <button onclick="filterCommunities()">Filter</button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Secret Pocket. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/community.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post - My Secret Pocket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Post Details</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="notes.html">My Notes</a>
+            <a href="community.html">Communities</a>
+            <a href="view_affirmation.html">Affirmations</a>
+            <a href="php/logout.php">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section id="post-content">
+            <!-- Post content will be dynamically loaded here -->
+        </section>
+        <section class="comments-section" id="comments-section">
+            <h4>Comments</h4>
+            <div class="comments-container" id="comments-container">
+                <!-- Comments will be dynamically loaded here -->
+            </div>
+
+            <form class="comment-form">
+                <textarea name="content" placeholder="Add a comment..." required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/view_post.js"></script>
+</body>
+</html>

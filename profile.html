@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - My Secret Pocket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Profile</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="notes.html">My Notes</a>
+            <a href="community.html">Communities</a>
+            <a href="view_affirmation.html">Affirmations</a>
+            <a href="php/logout.php">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Update Profile</h2>
+            <form id="update-profile-form" action="php/update_profile.php" method="POST">
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new_password">
+                
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm_password">
+                
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Secret Pocket. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
